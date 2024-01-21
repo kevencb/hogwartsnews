@@ -15,7 +15,7 @@ import ButtonLight from "./ButtonLight.astro";
     <label for="menu" class="bg-open-menu w-8 h-8 bg-cover bg-center cursor-pointer peer-checked:bg-close-menu transition-all z-50 text-transparent lg:hidden">Menu
     </label>
 
-    <div class="opacity-0 peer-checked:block peer-checked:opacity-100 transition-opacity delay-300 lg:static lg:opacity-100">
+    <div class="fixed inset-0 translate-x-full peer-checked:translate-x-0 transition-transform lg:static">
         <ul class="absolute inset-x-0 top-20 p-8 bg-transparent border border-cyan-500 w-[90%] mx-auto rounded-md h-max flex flex-col text-center gap-6 font-bold shadow-xl lg:static lg:w-max lg:p-0 lg:flex-row lg:shadow-none lg:border-none">
 
             <NavLink url="/gryffindor" name="Gryffindor"/>
@@ -24,8 +24,8 @@ import ButtonLight from "./ButtonLight.astro";
             <NavLink url="/slytherin" name="Slytherin"/>
 
             <div class="flex flex-col-reverse gap-2 lg:hidden">
-                <ButtonLight url="#" name="Register"/>
-                <ButtonDark url="#" name="Login"/>
+                <ButtonLight url="/" name="Register"/>
+                <ButtonDark url="/" name="Login"/>
             </div>
         </ul>
     </div>
