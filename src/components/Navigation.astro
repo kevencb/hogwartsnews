@@ -5,15 +5,18 @@ import ButtonDark from "./ButtonDark.astro";
 import ButtonLight from "./ButtonLight.astro";
 ---
 
-<nav class="h-16 mx-auto overflow-hidden max-w-screen-xl flex items-center justify-between">
+<nav class="h-16 mx-auto overflow-hidden max-w-screen-xl flex flex-row-reverse items-center justify-between">
 
-    <Logo/>
+    <div class="flex-1 text-center">
+        <Logo/>
+    </div>
 
+    <label for="menu" class="bg-open-menu w-8 h-8 bg-cover bg-center cursor-pointer peer-checked:bg-close-menu transition-all z-50 lg:hidden">
+    </label>
     <input class="peer hidden" type="checkbox" name="menu" id="menu"/>
-    <label for="menu" class="bg-open-menu w-6 h-6 bg-cover bg-center cursor-pointer peer-checked:bg-close-menu transition-all z-50 lg:hidden"></label>
 
     <div class="fixed inset-0 translate-x-full peer-checked:translate-x-0 transition-all lg:static lg:translate-x-0">
-        <ul class="absolute inset-x-0 top-20 p-8 bg-transparent border border-cyan-500 w-[90%] mx-auto rounded-md h-max flex flex-col text-center gap-6 font-bold shadow-xl lg:static lg:w-max lg:p-0 lg:grid-flow-col lg:shadow-none">
+        <ul class="absolute inset-x-0 top-20 p-8 bg-transparent border border-cyan-500 w-[90%] mx-auto rounded-md h-max flex flex-col text-center gap-6 font-bold shadow-xl lg:static lg:w-max lg:p-0 lg:flex-row lg:shadow-none lg:border-none">
 
             <NavLink url="/gryffindor" name="Gryffindor"/>
             <NavLink url="/hufflepuff" name="Hufflepuff"/>
@@ -28,8 +31,8 @@ import ButtonLight from "./ButtonLight.astro";
     </div>
 
     <div class="hidden lg:flex gap-2">
-        <ButtonLight url="#" name="Register"/>
-        <ButtonDark url="#" name="Login"/>
+        <ButtonLight url="/" name="Register"/>
+        <ButtonDark url="/" name="Login"/>
     </div>
 
 </nav>
