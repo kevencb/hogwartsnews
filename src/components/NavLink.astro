@@ -1,0 +1,13 @@
+---
+export interface Props {
+    url: string;
+    name: string;
+}
+
+const { url, name } = Astro.props;
+---
+<li class="text-sm text-cyan-600 lg:text-cyan-600">
+    <a class="p-1 px-2 hover:border-b-2 border-cyan-500 transition-" href={url}>
+        {name}
+    </a>
+</li>

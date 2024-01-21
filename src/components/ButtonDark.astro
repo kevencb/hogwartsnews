@@ -1,0 +1,13 @@
+---
+export interface Props{
+    url: string;
+    name: string;
+}
+
+const btn_styles = "text-white text-center text-sm py-2 px-4 bg-cyan-500 rounded-md align-middle"
+
+const {url, name} = Astro.props;
+---
+
+<a class={btn_styles} href={url}>{name}</a>
+
