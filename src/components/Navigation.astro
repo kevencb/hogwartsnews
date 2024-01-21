@@ -5,17 +5,17 @@ import ButtonDark from "./ButtonDark.astro";
 import ButtonLight from "./ButtonLight.astro";
 ---
 
-<nav class="h-16 mx-auto overflow-hidden max-w-screen-xl flex flex-row-reverse items-center justify-between">
+<nav class="h-16 mx-auto overflow-hidden max-w-screen-xl flex flex-row-reverse items-center justify-between lg:flex-row">
 
-    <div class="flex-1 text-center">
+    <div class="flex-1 text-center lg:text-left lg:flex-none">
         <Logo/>
     </div>
 
-    <label for="menu" class="bg-open-menu w-8 h-8 bg-cover bg-center cursor-pointer peer-checked:bg-close-menu transition-all z-50 lg:hidden">
-    </label>
     <input class="peer hidden" type="checkbox" name="menu" id="menu"/>
+    <label for="menu" class="bg-open-menu w-8 h-8 bg-cover bg-center cursor-pointer peer-checked:bg-close-menu transition-all z-50 text-transparent lg:hidden">Menu
+    </label>
 
-    <div class="fixed inset-0 translate-x-full peer-checked:translate-x-0 transition-all lg:static lg:translate-x-0">
+    <div class="opacity-0 peer-checked:block peer-checked:opacity-100 transition-opacity delay-300 lg:static lg:opacity-100">
         <ul class="absolute inset-x-0 top-20 p-8 bg-transparent border border-cyan-500 w-[90%] mx-auto rounded-md h-max flex flex-col text-center gap-6 font-bold shadow-xl lg:static lg:w-max lg:p-0 lg:flex-row lg:shadow-none lg:border-none">
 
             <NavLink url="/gryffindor" name="Gryffindor"/>
@@ -36,6 +36,3 @@ import ButtonLight from "./ButtonLight.astro";
     </div>
 
 </nav>
-
-<style>
-</style>
