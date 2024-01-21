@@ -6,7 +6,7 @@ export default {
 		backgroundImage: {
 			"open-menu": "url('../../images/open-menu.svg')",
 			"close-menu": "url('../../images/close-menu.svg')"
-		}
+		},
 	},
 	plugins: [],
 }

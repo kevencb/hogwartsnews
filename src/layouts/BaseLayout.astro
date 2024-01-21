@@ -1,7 +1,20 @@
 ---
-
+import '../styles/global.css';
+import '@fontsource/merriweather';
+import Header from '../components/Header.astro';
+import Banner from '../components/Banner.astro';
 ---
 
-<main class="container mx-auto">
-    <slot/>
-</main>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Hogwarts News</title>
+	</head>
+	<body class="bg-gradient-to-b from-cyan-500 to-blue-500">
+		<Header/>
+		<Banner/>
+		<slot/>
+	</body>
+</html>
