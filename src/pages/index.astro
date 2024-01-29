@@ -1,19 +1,24 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Card from '../components/Card.astro';
+import Card from '@components/Card.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+import { getCollection } from 'astro:content';
+const blogPost = await getCollection("blog")
 ---
+
 <BaseLayout>
-    <main class="w-[90%] max-w-6xl mx-auto flex flex-col lg:flex-row lg:gap-16 items-center my-10 lg:my-20">
+    <main class="w-[90%] max-w-6xl mx-auto flex flex-col lg:flex-row lg:gap-16 items-center my-10 lg:my-16">
         <div class="hidden lg:block lg:w-max lg:h-max lg:rotate-[-90deg] md:-mx-20">
             <h2 class="text-5xl font-bold">Hogwarts</h2>
             <h3 class="text-lg uppercase lg:text-right">houses</h3>
         </div>
         <section class="">
             <div class="grid md:grid-cols-2 gap-6 lg:gap-x-8 lg:gap-y-10 col-span-8">
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                {
+                    blogPost.map((post) => (
+                    <Card title={post.data.title} author={post.data.author} date={post.data.date} description={post.data.description} image={post.data.image} href={`/blog/${post.slug}`}/>
+                    ))
+                }
             </div>
         </section>
     </main>

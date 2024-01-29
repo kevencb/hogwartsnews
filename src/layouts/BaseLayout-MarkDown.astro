@@ -1,7 +1,9 @@
 ---
+// import { getCollection } from 'astro:content';
+// const blogPosts = await getCollection('blog');
+
 import '@fontsource/merriweather';
 import Header from '@components/Header.astro';
-import Banner from '@components/Banner.astro';
 ---
 
 <html lang="es">
@@ -9,12 +11,10 @@ import Banner from '@components/Banner.astro';
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Hogwarts News</title>
+		<title></title>
 	</head>
 	<body class="w-[90%] max-w-7xl mx-auto">
 		<Header/>
-		<Banner/>
 		<slot/>
 	</body>
 </html>
-

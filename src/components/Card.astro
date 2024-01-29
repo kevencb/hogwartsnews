@@ -1,10 +1,26 @@
-<article class="rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-lg">
-    <div class="rounded-[10px] pt-20 p-6 bg-white">
-        <h3 class="text-gray-500 text-sm mb-2">12 Mayo 2023</h3>
-        <a href="">
-            <h2 class="text-lg text-gray-600 font-semibold text-balance leading-tight mb-5">Estudio de Runas Antiguas: Descifrando el Misterio de las Marcas</h2>
+---
+export interface Props{
+    title: string,
+    author: string,
+    date: Date,
+    description: string,
+    image?: string,
+    href: string
+}
+
+const { date, title, description, image, href } = Astro.props
+---
+
+
+<article class="w-[100%] rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-lg">
+    <div class="rounded-[10px] pt-6 p-6 bg-white">
+        <img src={image} alt={title} class="mb-6">
+        <h3 class="text-gray-500 text-xs mb-2">{date}</h3>
+        <a href={href}>
+            <h2 class="text-2xl text-gray-600 font-bold text-pretty leading-tight mb-2">{title}</h2>
+            <p class=" text-slate-500">{description}</p>
         </a>
-        <div class="flex gap-1 flex-wrap">
+        <div class="flex gap-1 flex-wrap mt-5">
             <span class="rounded-full bg-purple-100 text-purple-700 text-xs py-0.5 px-3">Ravenclaw</span>
             <span class="rounded-full bg-purple-100 text-purple-700 text-xs py-0.5 px-3">Ravenclaw</span>
         </div>
