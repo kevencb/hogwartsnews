@@ -11,17 +11,23 @@ image: "https://docs.astro.build/assets/arc.webp"
 # tags: ["astro", "bloguear", "aprender en público", "éxitos"]
 ---
 
-## Valentía y Espíritu: La Emocionante Copa de las Casas en Gryffindor"
+## Valentía y Espíritu: 
 
-Introducción:
+## La Emocionante Copa de las Casas en Gryffindor"
+
 Gryffindor, la casa de la valentía, alberga una de las competiciones más emocionantes de Hogwarts: la Copa de las Casas. Esta celebración anual une a los estudiantes en una competencia feroz, poniendo a prueba no solo sus habilidades mágicas, sino también su determinación y coraje.
 
-Actividades Destacadas:
+## Actividades Destacadas
 
-1 Desafíos Mágicos: Los estudiantes de Gryffindor se enfrentan en desafíos mágicos que van desde duelos hasta pruebas de habilidades específicas.
-1 Competencia Deportiva: La Quidditch y otros deportes mágicos son parte integral de la Copa, fomentando el trabajo en equipo y la camaradería.
-1Eventos Sociales: No todo es competencia; eventos sociales como cenas temáticas y bailes fortalecen los lazos entre los Gryffindorianos.
+![img](https://docs.astro.build/assets/arc.webp)
 
-## Conclusión
+1. Elemento de lista 1
+2. Elemento de lista 2
+    - Elemento de lista 3
+    - Elemento de lista 4
+        1. Elemento de lista
+        2. Elemento de lista 6
 
 La Copa de las Casas en Gryffindor no solo celebra la destreza mágica, sino también la valentía y el espíritu intrépido que define a esta casa.
+
+![img](https://docs.astro.build/assets/arc.webp)

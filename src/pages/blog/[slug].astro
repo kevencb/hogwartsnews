@@ -1,6 +1,8 @@
 ---
-import BaseLayoutMarkDown from "@layouts/BaseLayout-MarkDown.astro";
+import Header from "@components/Header.astro";
 import Prose from "@components/Prose.astro";
+
+import BaseLayoutMarkdown from "@layouts/BaseLayout-MarkDown.astro"
 
 import { getCollection } from "astro:content";
 
@@ -16,11 +18,13 @@ export async function getStaticPaths(){
 const { post } = Astro.props
 const { Content } = await post.render()
 ---
-
-<BaseLayoutMarkDown>
-    <main>
+<Header/>
+<BaseLayoutMarkdown>
+    <main class="w-[90%] max-w-7xl mx-auto bg-green-500 grid grid-cols-1">
+        
         <Prose>
-            <Content/>
+            <Content/> 
         </Prose>
+        
     </main>
-</BaseLayoutMarkDown>
+</BaseLayoutMarkdown>
